@@ -22,7 +22,7 @@
                 <div class="form-group">
                     <div class="col-sm-offset-1 col-sm-10">
                         <div class="list-group">
-                            <a href="#" class="list-group-item" ng-repeat="text in texts">
+                            <a href ng-click="edit(text)" class="list-group-item" ng-repeat="text in texts">
                                 {{text.title}}
                             </a>
                         </div>

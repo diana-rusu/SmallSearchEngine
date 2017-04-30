@@ -21,5 +21,4 @@ app.config(['$stateProvider','$httpProvider',function($stateProvider,$httpProvid
 }]);
 app.run(['$rootScope','$state','$stateParams','$location','$window' ,function ($rootScope,$state,$stateParams,$location,$window) {
                 $state.go('list');
-
             }]);
