@@ -5,6 +5,7 @@ import nl.knowable.repository.TextRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -27,6 +28,13 @@ public class SearchController {
     public List<Text> searchAll() {
         List<Text> textsList = new ArrayList<>();
         Iterable<Text> texts = textRepository.findAll();
+        texts.forEach(textsList::add);
+        return textsList;
+    }
+    @GetMapping(value = "/sort")
+    public List<Text> searchAllSorted() {
+        List<Text> textsList = new ArrayList<>();
+        Iterable<Text> texts = textRepository.findAll(new Sort(Sort.Direction.ASC, "id"));
         texts.forEach(textsList::add);
         return textsList;
     }
