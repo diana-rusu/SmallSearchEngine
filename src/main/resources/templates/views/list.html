@@ -6,14 +6,14 @@
             </h2>
         </div>
 
-        <form class="well form-horizontal">
+        <form class="well form-horizontal" ng-submit="filterTitle()">
             <div class="row">
                 <div class="form-group">
                     <div class="col-sm-offset-1 col-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon" id="searchID">Search</span>
                             <input type="search" class="form-control" placeholder="Filter by title ..."
-                                   aria-describedby="searchID">
+                                   aria-describedby="searchID" ng-model="searchText">
                         </div>
                     </div>
                 </div>
@@ -29,13 +29,13 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="form-group">
-                    <div class="col-sm-offset-1 col-sm-10">
-                        <button class="btn btn-info" ui-sref="add">Add</button>
-                    </div>
+        </form>
+        <div class="row">
+            <div class="form-group">
+                <div class="col-sm-offset-1 col-sm-10">
+                    <button class="btn btn-info" ui-sref="add">Add</button>
                 </div>
             </div>
-        </form>
+        </div>
     </div>
 </div>
