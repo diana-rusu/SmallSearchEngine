@@ -10,8 +10,11 @@
             <div class="row">
                 <div class="form-group">
                     <div class="col-sm-offset-1 col-sm-10">
-                        <label for="searchID" col-sm-2>Search</label>
-                        <input type="search" class="form-control" id="searchID" placeholder="Search text">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="searchID">Search</span>
+                            <input type="search" class="form-control" placeholder="Filter by title ..."
+                                   aria-describedby="searchID">
+                        </div>
                     </div>
                 </div>
             </div>
