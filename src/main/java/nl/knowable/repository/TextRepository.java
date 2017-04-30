@@ -5,5 +5,4 @@ import java.util.List;
 
 public interface TextRepository extends ElasticsearchRepository<Text, Long> {
     List<Text> findByTitle(String text);
-    List<Text> findAllByOrderByIdAsc();
 }
