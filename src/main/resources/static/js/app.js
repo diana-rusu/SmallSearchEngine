@@ -9,7 +9,14 @@ app.config(['$stateProvider','$httpProvider',function($stateProvider,$httpProvid
 
     .state('list',{
         url:"/list",
-        templateUrl:'/list'});
+        templateUrl:'/list',
+        resolve : {
+        texts : function($http){
+          return $http.get("/sort");
+        }
+        },
+        controller: 'listCtrl'
+        });
 
 }]);
 app.run(['$rootScope','$state','$stateParams','$location','$window' ,function ($rootScope,$state,$stateParams,$location,$window) {
