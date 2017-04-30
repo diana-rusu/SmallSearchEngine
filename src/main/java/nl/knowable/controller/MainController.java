@@ -1,17 +1,23 @@
 package nl.knowable.controller;
 
 import nl.knowable.model.Text;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * Created by Diana on 4/29/2017.
  */
 @Controller
 public class MainController {
+    private final Logger slf4jLogger = LoggerFactory.getLogger(MainController.class);
+
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String homepage() {
         return "index";
@@ -32,13 +38,7 @@ public class MainController {
         return "views/list";
     }
 
-//    @RequestMapping(value = "/add", method = RequestMethod.POST)
-//    public
-//    @ResponseBody
-//    Text addData(@RequestBody Text newScenario) {
-//
-//        return "views/add";
-//    }
+
 
 
 }

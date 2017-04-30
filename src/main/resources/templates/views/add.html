@@ -6,23 +6,30 @@
             </h2>
         </div>
 
-        <form class="form-horizontal" ng-submit="saveText(sm)">
+        <form class="well form-horizontal" ng-submit="saveText(sm)">
             <div class="row">
-                <div class="form-group col-sm-5 col-sm-offset-4">
-                    <label for="titleID">Title</label>
-                    <input type="text" class="form-control" id="titleID" placeholder="Add a title" ng-model="text.title">
+                <div class="form-group">
+                    <div class="col-sm-offset-1 col-sm-10">
+                        <label for="titleID">Title</label>
+                        <input type="text" class="form-control" id="titleID" placeholder="Add a title"
+                               ng-model="text.title">
+                    </div>
                 </div>
             </div>
             <div class="row">
-                <div class="form-group col-sm-5 col-sm-offset-5">
-                    <label>Text</label>
-                    <textarea class="form-control" rows="3" ng-model="text.content"></textarea>
+                <div class="form-group">
+                    <div class="col-sm-offset-1 col-sm-10">
+                        <label>Text</label>
+                        <textarea class="form-control" rows="3" ng-model="text.content"></textarea>
+                    </div>
                 </div>
             </div>
 
             <div class="row">
-                <div class="form-group col-sm-5 col-sm-offset-1">
-                    <button class="btn btn-success" type="submit">Save</button>
+                <div class="form-group">
+                    <div class="col-sm-offset-1 col-sm-10">
+                        <button class="btn btn-success" type="submit">Save</button>
+                    </div>
                 </div>
             </div>
 
